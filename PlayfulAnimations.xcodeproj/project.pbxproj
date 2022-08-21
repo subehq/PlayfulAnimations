@@ -11,6 +11,8 @@
 		9609658F28B25E5E00483321 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9609658E28B25E5E00483321 /* ContentView.swift */; };
 		9609659128B25E5F00483321 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9609659028B25E5F00483321 /* Assets.xcassets */; };
 		9609659528B25E5F00483321 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9609659428B25E5F00483321 /* Preview Assets.xcassets */; };
+		966AC01A28B28A6C00EEAE0D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966AC01928B28A6C00EEAE0D /* CardView.swift */; };
+		966AC01E28B2A5BD00EEAE0D /* CameraView in Frameworks */ = {isa = PBXBuildFile; productRef = 966AC01D28B2A5BD00EEAE0D /* CameraView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		9609659028B25E5F00483321 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9609659228B25E5F00483321 /* PlayfulAnimations.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PlayfulAnimations.entitlements; sourceTree = "<group>"; };
 		9609659428B25E5F00483321 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		966AC01928B28A6C00EEAE0D /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		966AC01B28B2964E00EEAE0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				966AC01E28B2A5BD00EEAE0D /* CameraView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,8 +57,10 @@
 		9609658B28B25E5E00483321 /* PlayfulAnimations */ = {
 			isa = PBXGroup;
 			children = (
+				966AC01B28B2964E00EEAE0D /* Info.plist */,
 				9609658C28B25E5E00483321 /* PlayfulAnimationsApp.swift */,
 				9609658E28B25E5E00483321 /* ContentView.swift */,
+				966AC01928B28A6C00EEAE0D /* CardView.swift */,
 				9609659028B25E5F00483321 /* Assets.xcassets */,
 				9609659228B25E5F00483321 /* PlayfulAnimations.entitlements */,
 				9609659328B25E5F00483321 /* Preview Content */,
@@ -85,6 +92,9 @@
 			dependencies = (
 			);
 			name = PlayfulAnimations;
+			packageProductDependencies = (
+				966AC01D28B2A5BD00EEAE0D /* CameraView */,
+			);
 			productName = PlayfulAnimations;
 			productReference = 9609658928B25E5E00483321 /* PlayfulAnimations.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +123,9 @@
 				Base,
 			);
 			mainGroup = 9609658028B25E5D00483321;
+			packageReferences = (
+				966AC01C28B2A5BD00EEAE0D /* XCRemoteSwiftPackageReference "CameraView" */,
+			);
 			productRefGroup = 9609658A28B25E5E00483321 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9609658F28B25E5E00483321 /* ContentView.swift in Sources */,
+				966AC01A28B28A6C00EEAE0D /* CardView.swift in Sources */,
 				9609658D28B25E5E00483321 /* PlayfulAnimationsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +283,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlayfulAnimations/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSMotionUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -307,6 +324,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlayfulAnimations/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSMotionUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -354,6 +374,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		966AC01C28B2A5BD00EEAE0D /* XCRemoteSwiftPackageReference "CameraView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/brettfazio/CameraView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		966AC01D28B2A5BD00EEAE0D /* CameraView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 966AC01C28B2A5BD00EEAE0D /* XCRemoteSwiftPackageReference "CameraView" */;
+			productName = CameraView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9609658128B25E5D00483321 /* Project object */;
 }
